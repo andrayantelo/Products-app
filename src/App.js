@@ -15,10 +15,8 @@ import productsData from "./vschoolProducts";
 function App() {
   const colors = ['#821a81', '#3cd480', '#0ee0e9', '#1635c6', '#82e191', '#a6b9af' ];
   const productComponents = productsData.map((product, index) => {
-      let style = {
-          backgroundColor: colors[index]
-      }
-      return <Product key={product.id} style={style} product={product} /> 
+
+      return <Product key={product.id} color={colors[index]} product={product} /> 
       })
   return (
       <div>
